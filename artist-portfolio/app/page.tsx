@@ -1,0 +1,118 @@
+// app/page.tsx
+import Link from "next/link";
+import FeaturedWorks from "@/components/FeaturedWorks";
+
+export default function HomePage() {
+  return (
+    <>
+      {/* ── HERO ── */}
+      <section className="relative min-h-screen flex flex-col justify-end pb-20 px-6 overflow-hidden bg-[#050505]">
+        
+        {/* Fond décoratif : Ambiance lumineuse organique */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Halo Cyan/Bleu (évoquant tes effets FX sur Ibis Paint) */}
+          <div className="absolute top-[-10%] right-[-5%] w-[70vw] h-[70vw] rounded-full bg-cyan-500/10 blur-[140px] animate-pulse" />
+          {/* Halo ambre chaud */}
+          <div className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-amber-500/5 blur-[120px]" />
+          {/* Texture de grain artistique */}
+          <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        </div>
+
+        {/* Année ou signature discrète */}
+        <div className="absolute top-24 right-6 md:right-16 font-display text-[clamp(6rem,15vw,12rem)] leading-none text-white/[0.03] select-none pointer-events-none font-black tracking-tighter uppercase">
+          Manoa
+        </div>
+
+        <div className="relative max-w-7xl mx-auto w-full">
+          {/* Étiquette */}
+          <div className="flex items-center gap-4 mb-6 animate-[fadeUp_0.6s_ease_both]">
+            <span className="block w-12 h-[1px] bg-gradient-to-r from-amber-300 to-transparent" />
+            <span className="text-[10px] tracking-[0.4em] uppercase text-neutral-400 font-semibold">
+              Digital Artist · Concept Art
+            </span>
+          </div>
+
+          {/* Titre principal : Focus sur l'imaginaire */}
+          <h1
+            className="font-display text-[clamp(3rem,8vw,8.5rem)] leading-[0.85] tracking-[-0.04em] text-white mb-12 animate-[fadeUp_0.7s_0.1s_ease_both_backwards]"
+          >
+            L'âme dans le <br />
+            <span className="italic font-serif text-amber-300 px-2">numérique.</span>
+          </h1>
+
+          {/* Description & CTA */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 animate-[fadeUp_0.7s_0.25s_ease_both_backwards]">
+            <p className="max-w-lg text-neutral-400 text-lg font-light leading-relaxed">
+              Exploration visuelle de mondes imaginaires et de portraits habités. 
+              Chaque œuvre est patiemment sculptée par la lumière et la couleur, 
+              réalisée entièrement à <span className="text-white font-medium italic text-sm">main levée sur smartphone.</span>
+            </p>
+
+            <div className="flex items-center gap-8 shrink-0">
+              <Link
+                href="/gallery"
+                className="group relative overflow-hidden px-10 py-5 bg-white text-black text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-300 hover:pr-14"
+              >
+                <span className="relative z-10">Galerie Complète</span>
+                <span className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">→</span>
+              </Link>
+
+              <Link
+                href="/process"
+                className="text-[10px] text-neutral-500 hover:text-amber-300 transition-colors duration-300 tracking-[0.3em] uppercase font-bold border-b border-neutral-800 pb-1"
+              >
+                Mon Processus
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GALERIE SÉLECTIVE ── */}
+      <section className="py-32 px-6 bg-[#050505]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+            <div className="space-y-2">
+              <h2 className="font-display text-5xl md:text-7xl text-white tracking-tighter">
+                Pièces <span className="text-amber-300/80 italic font-serif">Maîtresses</span>
+              </h2>
+              <p className="text-neutral-500 text-[10px] tracking-[0.3em] uppercase font-medium">Ibis Paint Illustrations</p>
+            </div>
+            <Link
+              href="/gallery"
+              className="group text-[10px] text-neutral-400 hover:text-white transition-colors duration-300 tracking-[0.3em] uppercase flex items-center gap-3"
+            >
+              Voir tout le catalogue
+              <span className="w-8 h-px bg-neutral-800 group-hover:w-12 group-hover:bg-amber-300 transition-all" />
+            </Link>
+          </div>
+
+          <FeaturedWorks />
+        </div>
+      </section>
+
+      {/* ── SECTION COMMISSIONS ── */}
+      <section className="py-40 px-6 relative border-t border-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="text-[10px] tracking-[0.4em] uppercase text-amber-300/60 font-semibold mb-6 block">
+            Commissions & Projets
+          </span>
+          <h2 className="font-display text-6xl md:text-8xl text-white tracking-tighter mb-10">
+            Donner vie à <span className="italic font-serif text-amber-300">votre vision.</span>
+          </h2>
+          <p className="text-neutral-400 font-light text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+            Disponible pour des projets d'illustration, de concept art ou des portraits sur mesure.
+          </p>
+          <div className="flex justify-center">
+            <Link
+              href="/contact"
+              className="px-12 py-6 border border-white/10 text-white text-[10px] tracking-[0.3em] uppercase hover:border-amber-300/50 hover:text-amber-300 transition-all duration-500"
+            >
+              Démarrer une collaboration
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
