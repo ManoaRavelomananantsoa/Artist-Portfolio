@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
-  { href: "/", label: "Accueil" },
-  { href: "/gallery", label: "Galerie" },
-  { href: "/about", label: "À propos" },
+  { href: "/", label: "Home" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -27,7 +27,7 @@ export default function Navbar() {
           href="/"
           className="font-display text-xl italic tracking-tight text-white hover:text-amber-300 transition-colors duration-300"
         >
-          Studio<span className="not-italic font-bold">·</span>NX
+         ArtOf<span className="not-italic font-bold">·</span>Manoa
         </Link>
 
         {/* Desktop nav */}
@@ -62,7 +62,7 @@ export default function Navbar() {
           href="/contact"
           className="hidden md:inline-flex items-center gap-2 px-5 py-2 text-xs tracking-widest uppercase font-medium border border-amber-300/40 text-amber-300 hover:bg-amber-300 hover:text-neutral-950 transition-all duration-300 rounded-none"
         >
-          Collaborer
+          Collaborate
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -109,7 +109,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="block text-center py-3 text-xs tracking-widest uppercase font-medium border border-amber-300/40 text-amber-300"
             >
-              Collaborer
+              Collaborate
             </Link>
           </li>
         </ul>

@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Colonne identité */}
           <div className="md:col-span-1">
             <p className="font-display text-3xl italic text-white mb-3">
-              Studio<span className="not-italic font-bold">·</span>NX
+              ArtOf<span className="not-italic font-bold">·</span>Manoa
             </p>
             <p className="text-neutral-500 text-sm font-light leading-relaxed max-w-xs">
               Art numérique et illustration — explorant les frontières entre le réel et l'imaginaire.
