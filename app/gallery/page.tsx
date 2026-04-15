@@ -28,6 +28,17 @@ export default function GalleryPage() {
             The <span className="italic font-serif text-amber-300">Archive</span>
           </h1>
 
+          {/* Challenge Description */}
+          {filter === 'Challenge' && (
+            <div className="max-w-3xl mb-8">
+              <p className="text-neutral-400 text-sm leading-relaxed font-light">
+                These drawings were created with the goal of rivaling AI-generated artwork. 
+                Each piece represents nearly a month of dedicated work, showcasing the depth 
+                of human creativity and artistic craftsmanship that cannot be replicated by algorithms.
+              </p>
+            </div>
+          )}
+
           {/* Filter Bar */}
           <div className="flex flex-wrap gap-8 border-b border-white/5 pb-6">
             {categories.map((cat) => (
@@ -69,6 +80,11 @@ export default function GalleryPage() {
                 <h3 className="text-white text-xl font-serif italic tracking-wide mb-3">
                   {art.title}
                 </h3>
+                {art.duration && (
+                  <span className="text-white text-[9px] tracking-[0.2em] uppercase mb-3">
+                    {art.duration}
+                  </span>
+                )}
                 {art.category === 'Challenge' && art.processImages && (
                   <button
                     onClick={() => setSelectedProcess(art.processImages!)}

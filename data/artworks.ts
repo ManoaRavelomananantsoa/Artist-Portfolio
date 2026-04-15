@@ -4,6 +4,7 @@ export interface Artwork {
   category: 'Realism' | 'Fantasy' | 'Concept' | 'Challenge';
   image: string; // Path to your images in /public/gallery/
   processImages?: string[]; // Array of process image paths for Challenge category
+  duration?: string; // Duration of artwork creation
 }
 
 export const artworks: Artwork[] = [
@@ -32,6 +33,7 @@ export const artworks: Artwork[] = [
     title: 'Blue Eyed Challenge', 
     category: 'Challenge', 
     image: '/gallery/challenge/blueeyed/blueeyed.jpeg',
+    duration: '78 days',
     processImages: [
       '/gallery/challenge/blueeyed/process/process1.jpeg',
       '/gallery/challenge/blueeyed/process/process2.jpeg',
@@ -49,6 +51,7 @@ export const artworks: Artwork[] = [
     title: 'Radiant Girl Challenge', 
     category: 'Challenge', 
     image: '/gallery/challenge/radiantGirl/radiantGirl.jpeg',
+    duration: '90 hours',
     processImages: [
       '/gallery/challenge/radiantGirl/process/process1.jpeg',
       '/gallery/challenge/radiantGirl/process/process2.jpeg',
