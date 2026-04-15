@@ -1,43 +1,44 @@
 // components/FeaturedWorks.tsx
 import Link from "next/link";
+import Image from "next/image";
 
-// Données temporaires — à remplacer par tes vraies œuvres
+// Featured Master Pieces
 const works = [
   {
-    id: "1",
-    title: "Éclipse Mécanique",
-    category: "Illustration",
+    id: "8",
+    title: "Moonlight Village",
+    category: "Fantasy",
     year: "2024",
+    image: "/gallery/fantasy/moonlight village.jpeg",
     accent: "col-span-1 md:col-span-2 row-span-2", // grande carte
     aspectClass: "aspect-[4/3] md:aspect-auto md:h-full",
-    color: "from-amber-900/20 to-neutral-900",
   },
   {
-    id: "2",
-    title: "Fragment #07",
-    category: "Art numérique",
+    id: "12",
+    title: "Blue Eyed",
+    category: "Realism",
     year: "2024",
+    image: "/gallery/realism/blueeyed.jpeg",
     accent: "col-span-1",
     aspectClass: "aspect-square",
-    color: "from-blue-900/20 to-neutral-900",
   },
   {
-    id: "3",
-    title: "Serein",
-    category: "Illustration",
-    year: "2023",
+    id: "9",
+    title: "Mother Nature",
+    category: "Fantasy",
+    year: "2024",
+    image: "/gallery/fantasy/motherNature.jpeg",
     accent: "col-span-1",
     aspectClass: "aspect-square",
-    color: "from-violet-900/20 to-neutral-900",
   },
   {
-    id: "4",
-    title: "Forêt Syntaxique",
-    category: "Concept art",
-    year: "2023",
+    id: "6",
+    title: "WhatsApp Image",
+    category: "Fantasy",
+    year: "2024",
+    image: "/gallery/fantasy/WhatsApp Image 2026-04-12 at 20.31.10.jpeg",
     accent: "col-span-1 md:col-span-2",
     aspectClass: "aspect-[16/7]",
-    color: "from-emerald-900/20 to-neutral-900",
   },
 ];
 
@@ -50,29 +51,15 @@ export default function FeaturedWorks() {
           href={`/gallery/${work.id}`}
           className={`group relative overflow-hidden bg-neutral-900 border border-white/5 hover:border-amber-300/20 transition-all duration-500 ${work.accent}`}
         >
-          {/* Placeholder gradient — remplacer par next/image */}
-          <div
-            className={`absolute inset-0 bg-gradient-to-br ${work.color} transition-all duration-700 group-hover:scale-105`}
+          {/* Image */}
+          <img
+            src={work.image}
+            alt={work.title}
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${work.aspectClass}`}
           />
 
-          {/* Motif décoratif */}
-          <div
-            className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #fff 1px, transparent 1px)",
-              backgroundSize: "24px 24px",
-            }}
-          />
-
-          {/* Icône image placeholder */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-0 transition-opacity duration-300">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="0.5">
-              <rect x="3" y="3" width="18" height="18" rx="1"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="M21 15l-5-5L5 21"/>
-            </svg>
-          </div>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40" />
 
           {/* Overlay hover */}
           <div className="absolute inset-0 bg-neutral-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
