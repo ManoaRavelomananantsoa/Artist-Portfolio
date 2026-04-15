@@ -73,6 +73,10 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center gap-3 text-neutral-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-300" />
+                    Adobe Illustrator & Photoshop
+                  </li>
+                  <li className="flex items-center gap-3 text-neutral-400">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-300" />
                     2D Animation Fundamentals
                   </li>
                 </ul>
