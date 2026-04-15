@@ -9,11 +9,15 @@ export default function HomePage() {
       <section className="relative min-h-screen flex flex-col justify-end pb-20 px-6 overflow-hidden bg-[#050505]">
         
         {/* Decorative Background: Organic Light & Texture */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Cyan/Blue Glow (Reflecting your digital FX mastery) */}
-          <div className="absolute top-[-10%] right-[-5%] w-[70vw] h-[70vw] rounded-full bg-cyan-500/10 blur-[140px] animate-pulse" />
-          {/* Warm Amber Glow */}
-          <div className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-amber-500/5 blur-[120px]" />
+        <div className="absolute inset-0 pointer-events-none z-0">
+          {/* Background Image */}
+          <img 
+            src="/gallery/background/background.png"
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-black/60" />
           {/* Subtle Artistic Grain */}
           <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         </div>
@@ -23,7 +27,7 @@ export default function HomePage() {
           Manoa
         </div>
 
-        <div className="relative max-w-7xl mx-auto w-full">
+        <div className="relative max-w-7xl mx-auto w-full z-10">
           {/* Label with a fine line */}
           <div className="flex items-center gap-4 mb-6 animate-[fadeUp_0.6s_ease_both]">
             <span className="block w-12 h-[1px] bg-gradient-to-r from-amber-300 to-transparent" />
