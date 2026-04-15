@@ -96,11 +96,12 @@ export default function AboutPage() {
           {/* Right Column: Visual/Quote */}
           <div className="lg:col-span-4 lg:col-start-9 space-y-8">
             <div className="relative aspect-[3/4] bg-neutral-900 border border-white/5 overflow-hidden group">
-              {/* Replace with your actual photo or a signature piece */}
-              <div className="absolute inset-0 flex items-center justify-center text-neutral-800 uppercase tracking-[0.5em] text-xs rotate-90">
-                Visual Artist
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-60" />
+              <img 
+                src="/gallery/me/me.jpeg" 
+                alt="Artist Photo"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-40" />
               {/* Decorative Frame */}
               <div className="absolute inset-4 border border-white/10 pointer-events-none group-hover:border-amber-300/30 transition-colors duration-500" />
             </div>
