@@ -6,13 +6,14 @@ import Link from 'next/link';
 import { artworks, Artwork } from '@/data/artworks';
 
 export default function GalleryPage() {
-  const [filter, setFilter] = useState<'All' | 'Realism' | 'Fantasy' | 'Concept'>('All');
+  const [filter, setFilter] = useState<'All' | 'Realism' | 'Fantasy' | 'Concept' | 'Challenge'>('All');
+  const [selectedProcess, setSelectedProcess] = useState<string[] | null>(null);
 
   const filteredArt = filter === 'All' 
     ? artworks 
     : artworks.filter(art => art.category === filter);
 
-  const categories = ['All', 'Realism', 'Fantasy', 'Concept'];
+  const categories = ['All', 'Realism', 'Fantasy', 'Concept', 'Challenge'];
 
   return (
     <main className="min-h-screen bg-[#050505] pt-32 pb-20 px-6">
@@ -65,9 +66,17 @@ export default function GalleryPage() {
                 <span className="text-amber-300 text-[9px] tracking-[0.3em] uppercase mb-2">
                   {art.category}
                 </span>
-                <h3 className="text-white text-xl font-serif italic tracking-wide">
+                <h3 className="text-white text-xl font-serif italic tracking-wide mb-3">
                   {art.title}
                 </h3>
+                {art.category === 'Challenge' && art.processImages && (
+                  <button
+                    onClick={() => setSelectedProcess(art.processImages!)}
+                    className="text-[9px] tracking-[0.2em] uppercase text-white border border-white/30 px-4 py-2 hover:bg-white hover:text-black transition-all"
+                  >
+                    View Process
+                  </button>
+                )}
               </div>
             </div>
           ))}
@@ -80,6 +89,43 @@ export default function GalleryPage() {
           </div>
         )}
       </div>
+
+      {/* Process Modal */}
+      {selectedProcess && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8"
+          onClick={() => setSelectedProcess(null)}
+        >
+          <div 
+            className="max-w-6xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedProcess(null)}
+              className="fixed top-8 right-8 text-white text-4xl hover:text-amber-300 transition-colors z-10"
+            >
+              ×
+            </button>
+            <h2 className="text-white text-2xl font-serif italic mb-8 text-center">
+              Process
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {selectedProcess.map((img, index) => (
+                <div key={index} className="relative">
+                  <img 
+                    src={img} 
+                    alt={`Process ${index + 1}`}
+                    className="w-full h-auto object-cover"
+                  />
+                  <span className="absolute bottom-2 left-2 text-white text-xs bg-black/50 px-2 py-1">
+                    Step {index + 1}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
