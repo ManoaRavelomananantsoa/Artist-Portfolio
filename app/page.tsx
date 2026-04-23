@@ -1,6 +1,6 @@
-// app/page.tsx
 import Link from "next/link";
 import FeaturedWorks from "@/components/FeaturedWorks";
+import BrushStroke from "@/components/BrushStroke";
 
 export default function HomePage() {
   return (
@@ -11,17 +11,13 @@ export default function HomePage() {
         {/* Decorative Background: Organic Light & Texture */}
         <div className="absolute inset-0 pointer-events-none z-0">
           {/* Background Image */}
-          <img 
-            src="/gallery/background/background.png"
-            alt="Background"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          
           {/* Dark Overlay for Text Readability */}
           <div className="absolute inset-0 bg-black/60" />
           {/* Subtle Artistic Grain */}
           <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         </div>
-
+        <BrushStroke /> 
         {/* Floating Signature/Name Background */}
         <div className="absolute top-24 right-6 md:right-16 font-display text-[clamp(6rem,15vw,12rem)] leading-none text-white/[0.03] select-none pointer-events-none font-black tracking-tighter uppercase">
           Manoa
@@ -30,7 +26,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto w-full z-10">
           {/* Label with a fine line */}
           <div className="flex items-center gap-4 mb-6 animate-[fadeUp_0.6s_ease_both]">
-            <span className="block w-12 h-[1px] bg-gradient-to-r from-amber-300 to-transparent" />
+            <span className="block w-12 h-px bg-linear-to-r from-amber-300 to-transparent" />
             <span className="text-[10px] tracking-[0.4em] uppercase text-neutral-400 font-semibold">
               Digital Artist · Concept Art
             </span>
@@ -39,6 +35,7 @@ export default function HomePage() {
           {/* Main Title */}
           <h1
             className="font-display text-[clamp(3rem,8vw,8.5rem)] leading-[0.85] tracking-[-0.04em] text-white mb-12 animate-[fadeUp_0.7s_0.1s_ease_both_backwards]"
+            style={{ textShadow: "0 0 80px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)" }}
           >
             Soul within the <br />
             <span className="italic font-serif text-amber-300 px-2">digital.</span>
