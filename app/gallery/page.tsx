@@ -6,14 +6,14 @@ import Link from 'next/link';
 import { artworks, Artwork } from '@/data/artworks';
 
 export default function GalleryPage() {
-  const [filter, setFilter] = useState<'All' | 'Realism' | 'Fantasy' | 'Concept' | 'Challenge'>('All');
+  const [filter, setFilter] = useState<'All' | 'Realism' | 'Fantasy' | 'Concept' | 'Challenge' | 'Commission'>('All');
   const [selectedProcess, setSelectedProcess] = useState<string[] | null>(null);
 
   const filteredArt = filter === 'All' 
     ? artworks 
     : artworks.filter(art => art.category === filter);
 
-  const categories = ['All', 'Realism', 'Fantasy', 'Concept', 'Challenge'];
+  const categories = ['All', 'Realism', 'Fantasy', 'Concept', 'Challenge', 'Commission'];
 
   return (
     <main className="min-h-screen bg-[#050505] pt-32 pb-20 px-6">
@@ -35,6 +35,17 @@ export default function GalleryPage() {
                 These drawings were created with the goal of rivaling AI-generated artwork. 
                 Each piece represents nearly a month of dedicated work, showcasing the depth 
                 of human creativity and artistic craftsmanship that cannot be replicated by algorithms.
+              </p>
+            </div>
+          )}
+
+          {/* Commission Description */}
+          {filter === 'Commission' && (
+            <div className="max-w-3xl mb-8">
+              <p className="text-neutral-400 text-sm leading-relaxed font-light">
+                These are custom artworks created for clients who commissioned my services. 
+                Each piece is tailored to their specific vision and requirements, 
+                showcasing my ability to bring personalized concepts to life through digital art.
               </p>
             </div>
           )}

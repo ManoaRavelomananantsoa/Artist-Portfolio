@@ -1,7 +1,7 @@
 export interface Artwork {
   id: string;
   title: string;
-  category: 'Realism' | 'Fantasy' | 'Concept' | 'Challenge';
+  category: 'Realism' | 'Fantasy' | 'Concept' | 'Challenge' | 'Commission';
   image: string; // Path to your images in /public/gallery/
   processImages?: string[]; // Array of process image paths for Challenge category
   duration?: string; // Duration of artwork creation
@@ -59,5 +59,21 @@ export const artworks: Artwork[] = [
       '/gallery/challenge/radiantGirl/process/process4.jpeg',
       '/gallery/challenge/radiantGirl/process/process5.jpeg',
     ]
+  },
+
+  // Commission Art
+  { 
+    id: '16', 
+    title: 'Custom Portrait #1', 
+    category: 'Commission', 
+    image: '/gallery/concept/hello 2026.jpeg',
+    duration: '2 weeks',
+  },
+  { 
+    id: '17', 
+    title: 'Character Design #1', 
+    category: 'Commission', 
+    image: '/gallery/concept/king dragon.jpeg',
+    duration: '1 week',
   },
 ];
