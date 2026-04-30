@@ -60,20 +60,4 @@ export const artworks: Artwork[] = [
       '/gallery/challenge/radiantGirl/process/process5.jpeg',
     ]
   },
-
-  // Commission Art
-  { 
-    id: '16', 
-    title: 'Custom Portrait #1', 
-    category: 'Commission', 
-    image: '/gallery/concept/hello 2026.jpeg',
-    duration: '2 weeks',
-  },
-  { 
-    id: '17', 
-    title: 'Character Design #1', 
-    category: 'Commission', 
-    image: '/gallery/concept/king dragon.jpeg',
-    duration: '1 week',
-  },
 ];
