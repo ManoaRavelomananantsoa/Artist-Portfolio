@@ -96,12 +96,12 @@ export default function GalleryPage() {
                     {art.duration}
                   </span>
                 )}
-                {art.category === 'Challenge' && art.processImages && (
+                {(art.category === 'Challenge' || art.category === 'Commission') && art.processImages && (
                   <button
                     onClick={() => setSelectedProcess(art.processImages!)}
                     className="text-[9px] tracking-[0.2em] uppercase text-white border border-white/30 px-4 py-2 hover:bg-white hover:text-black transition-all"
                   >
-                    View Process
+                    {art.category === 'Challenge' ? 'View Process' : 'View All'}
                   </button>
                 )}
               </div>

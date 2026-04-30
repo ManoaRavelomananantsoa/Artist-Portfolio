@@ -60,4 +60,17 @@ export const artworks: Artwork[] = [
       '/gallery/challenge/radiantGirl/process/process5.jpeg',
     ]
   },
+
+  // Commission Art
+  { 
+    id: '16', 
+    title: 'Rova Manjakamiadana', 
+    category: 'Commission', 
+    image: '/gallery/comission/commission1/RovaManjakamiadana.jpeg',
+    duration: '2 weeks',
+    processImages: [
+      '/gallery/comission/commission1/backgroundanime1.jpeg',
+      '/gallery/comission/commission1/backgroundanime2.jpeg',
+    ]
+  },
 ];
