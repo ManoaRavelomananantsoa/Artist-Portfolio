@@ -73,7 +73,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center gap-3 text-neutral-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-300" />
-                    Adobe Illustrator & Photoshop
+                    Adobe Illustrator 
                   </li>
                   <li className="flex items-center gap-3 text-neutral-400">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-300" />
@@ -99,18 +99,18 @@ export default function AboutPage() {
 
           {/* Right Column: Visual/Quote */}
           <div className="lg:col-span-4 lg:col-start-9 space-y-8">
-            <div className="relative aspect-[3/4] bg-neutral-900 border border-white/5 overflow-hidden group">
+            <div className="relative aspect-3/4 bg-neutral-900 border border-white/5 overflow-hidden group">
               <img 
                 src="/gallery/me/me.jpeg" 
                 alt="Artist Photo"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-40" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#050505] to-transparent opacity-40" />
               {/* Decorative Frame */}
               <div className="absolute inset-4 border border-white/10 pointer-events-none group-hover:border-amber-300/30 transition-colors duration-500" />
             </div>
 
-            <div className="p-8 bg-white/[0.02] border border-white/5">
+            <div className="p-8 bg-white/2 border border-white/5">
               <p className="text-xs text-neutral-500 tracking-widest uppercase mb-4">Current Focus</p>
               <p className="text-white font-light italic tracking-wide">
                 Blending traditional realism techniques with the vibrant energy of digital FX.

@@ -11,7 +11,11 @@ export default function HomePage() {
         {/* Decorative Background: Organic Light & Texture */}
         <div className="absolute inset-0 pointer-events-none z-0">
           {/* Background Image */}
-          
+          {/* <img 
+            src="/gallery/background/"
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          /> */}
           {/* Dark Overlay for Text Readability */}
           <div className="absolute inset-0 bg-black/60" />
           {/* Subtle Artistic Grain */}
@@ -35,7 +39,7 @@ export default function HomePage() {
           {/* Main Title */}
           <h1
             className="font-display text-[clamp(3rem,8vw,8.5rem)] leading-[0.85] tracking-[-0.04em] text-white mb-12 animate-[fadeUp_0.7s_0.1s_ease_both_backwards]"
-            style={{ textShadow: "0 0 80px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)" }}
+            style={{ textShadow: "0 0 80px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.8)" }}
           >
             Soul within the <br />
             <span className="italic font-serif text-amber-300 px-2">digital.</span>

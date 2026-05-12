@@ -174,7 +174,7 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/maanoa_rh/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-amber-300 transition-colors block"
@@ -182,7 +182,7 @@ export default function ContactPage() {
                     Instagram
                   </a>
                   <a
-                    href="https://artstation.com"
+                    href="https://artstation.com/muunarch"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-amber-300 transition-colors block"

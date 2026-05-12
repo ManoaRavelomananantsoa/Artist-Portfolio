@@ -101,7 +101,7 @@ export default function GalleryPage() {
                     onClick={() => setSelectedProcess(art.processImages!)}
                     className="text-[9px] tracking-[0.2em] uppercase text-white border border-white/30 px-4 py-2 hover:bg-white hover:text-black transition-all"
                   >
-                    {art.category === 'Challenge' ? 'View Process' : 'View All'}
+                    {art.category === 'Challenge' ? 'View Process' : 'View More'}
                   </button>
                 )}
               </div>

@@ -66,11 +66,11 @@ export const artworks: Artwork[] = [
     id: '16', 
     title: 'Rova Manjakamiadana', 
     category: 'Commission', 
-    image: '/gallery/comission/commission1/RovaManjakamiadana.jpeg',
+    image: '/gallery/commission/commission1/RovaManjakamiadana.jpeg',
     duration: '2 weeks',
     processImages: [
-      '/gallery/comission/commission1/backgroundanime1.jpeg',
-      '/gallery/comission/commission1/backgroundanime2.jpeg',
+      '/gallery/commission/commission1/backgroundanime1.jpeg',
+      '/gallery/commission/commission1/backgroundanime2.jpeg',
     ]
   },
 ];
