@@ -67,10 +67,21 @@ export const artworks: Artwork[] = [
     title: 'Rova Manjakamiadana', 
     category: 'Commission', 
     image: '/gallery/commission/commission1/RovaManjakamiadana.jpeg',
-    duration: '2 weeks',
+    duration: '1 weeks',
     processImages: [
       '/gallery/commission/commission1/backgroundanime1.jpeg',
       '/gallery/commission/commission1/backgroundanime2.jpeg',
+    ]
+  },
+  { 
+    id: '17', 
+    title: 'Tananarivo landscapes', 
+    category: 'Commission', 
+    image: '/gallery/commission/commission2/road.jpg',
+    duration: ' 12 days',
+    processImages: [
+      '/gallery/commission/commission2/fisheyed.jpg',
+      '/gallery/commission/commission2/river_trench.jpg',
     ]
   },
 ];
