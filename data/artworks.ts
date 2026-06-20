@@ -82,6 +82,12 @@ export const artworks: Artwork[] = [
     processImages: [
       '/gallery/commission/commission2/fisheyed.jpg',
       '/gallery/commission/commission2/river_trench.jpg',
+      '/gallery/commission/commission2/road.jpg',
+      '/gallery/commission/commission2/manjakamiadana.jpg',
+      '/gallery/commission/commission2/staired_road.png',
+      '/gallery/commission/commission2/urban.png',
+      '/gallery/commission/commission2/room1.jpg',
+      '/gallery/commission/commission2/room2.jpg',
     ]
   },
 ];
