@@ -33,7 +33,7 @@ export const artworks: Artwork[] = [
     title: 'Blue Eyed Challenge', 
     category: 'Challenge', 
     image: '/gallery/challenge/blueeyed/blueeyed.jpeg',
-    duration: '78 days',
+    duration: '78 hours',
     processImages: [
       '/gallery/challenge/blueeyed/process/process1.jpeg',
       '/gallery/challenge/blueeyed/process/process2.jpeg',
